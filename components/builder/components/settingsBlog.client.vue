@@ -5,13 +5,13 @@
     >
 		<div style="display: flex; gap: 8px; align-items: flex-end; margin-bottom: 24px;">
 			<div style="width: 33%">
-				<!-- <UiSelect
+				<UiSelect
 					label="Автор"
 					v-model="bufData.autor"
 					read-text="text"
 					read-value="value"
 					:options='options'
-				/> -->
+				/>
 			</div>
 			<div style="width: 33%">
 				<p>Дата публикации</p>
@@ -23,13 +23,13 @@
 				/>
 			</div>
 			<div style="width: 33%">
-				<!-- <UiSelect
+				<UiSelect
 					label="Выбрать тег"
 					v-model="bufData.tags"
 					read-text="text"
 					read-value="value"
 					:options='tags'
-				/> -->
+				/>
 			</div>
 		</div>
 		<textarea rows="4" style="width: 100%;" v-model="bufData.title">Заголовок статьи</textarea>
@@ -74,8 +74,8 @@ if (Object.keys(bufData.value).length == 0) {
 }
 
 const {data: settings} = await useFetch(`/api/getSettings/?key=blog`, { server: true })
-// const options = Object.entries(settings.value.autor).map(item => {return {"value": Number(item[0]), "text": item[1]}})
-// const tags = Object.entries(settings.value.tags).map(item => {return {"value": Number(item[0]), "text": item[1]}})
+const options = Object.entries(settings.value.autor).map(item => {return {"value": Number(item[0]), "text": item[1]}})
+const tags = Object.entries(settings.value.tags).map(item => {return {"value": Number(item[0]), "text": item[1]}})
 </script>
 <style lang="scss" scoped>
 	.settings-button{
