@@ -1,0 +1,90 @@
+.content {
+    padding: 48px;
+    width: 100%;
+    height: 100%;
+    background: #F5F3FF;
+    border-radius: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    @media (max-width: 1260px) {
+        flex-direction: column;
+    }
+    @media (max-width: 720px) {
+        padding: 12px;
+        border-radius: 30px;
+    }
+
+    &__wrap {
+        margin-left: 24px;
+        &:first-child {
+            margin-left: 0;
+        }
+        @media (max-width: 1260px) {
+            margin-left: 0;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__wrap-card {
+        padding: 32px 32px 24px 40px;
+        background: #FFFFFF;
+        border: 1px solid #ECE8FF;
+        border-radius: 32px;
+        @media (max-width: 720px) {
+            padding: 12px;
+        }
+    }
+    &__wrap-title {
+        font-family: 'Inter';
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 48px;
+        color: #000000;
+        @media (max-width: 720px) {
+            font-size: 22px;
+            line-height: 32px;
+        }
+    }
+    &__wrap-card-link {
+        margin-top: 16px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        @media (max-width: 720px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    &__wrap-card-link-document {
+        margin-right: 21px;
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #921CBC;
+    }
+
+    &__wrap-card-link-date{
+        margin-right: 21px;
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #828282;
+    }
+
+    &__wrap-card-link-text {
+        margin-left: 4px;
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #828282;
+        @media (max-width: 720px) {
+            font-size: 10px;
+            line-height: 20px;
+        }
+    }
+}

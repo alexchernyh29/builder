@@ -1,0 +1,54 @@
+.container-default{
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  @media only screen and (max-width: 900px){
+  .container-default{
+      padding: 0 15px;
+  }
+}
+.container-mit{
+    max-width: 2560px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  @media only screen and (max-width: 1000px){
+  .container-mit{
+      padding: 0 15px;
+  }
+  }
+  
+/*
+Применение функций adaptiv-size и adaptiv-height
+$pcSize, $pcHeight - Максимальный размер шрифта
+$tabletSize, $tabletHeight - Дефолтный размер шрифта на разрешении 1280px
+$mobSize, $mobHeight - Минимальный размер шрифта
+$addSize, $addHeight - Разница между дефолтным значением и максимальным
+*/
+@mixin adaptiv-size($pcSize, $tabletSize, $mobSize) {
+	$addSize: $pcSize - $tabletSize;
+	font-size: calc(#{$tabletSize + px} + #{$addSize} * (100vw - 1280px) / (2560 - 1280));
+    @media (min-width: 2560px) {
+        font-size: #{$pcSize + px};
+    }
+    @media (max-width: 1279px) and (min-width: 720px) {
+        font-size: #{$mobSize + px};
+    }
+    @media (max-width: 720px) {
+        font-size: #{$mobSize + px};
+    }
+}
+@mixin adaptiv-height($pcHeight, $tabletHeight, $mobHeight) {
+	$addHeight: $pcHeight - $tabletHeight;
+	line-height: calc(#{$tabletHeight + px} + #{$addHeight} * (100vw - 1280px) / (2560 - 1280));
+    @media (min-width: 2560px) {
+        line-height: #{$pcHeight + px};
+    }
+    @media (max-width: 1279px) and (min-width: 720px) {
+        line-height: #{$mobHeight + px};
+    }
+    @media (max-width: 720px) {
+        line-height: #{$mobHeight + px};
+    }
+}
