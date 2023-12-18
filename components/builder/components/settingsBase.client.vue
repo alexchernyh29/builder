@@ -74,7 +74,7 @@ if (Object.keys(bufData.value).length == 0) {
 }
 
 const {data: settings} = await useFetch(`/api/getSettings/?key=base`, { server: true })
-// const options = Object.entries(settings.value.autor).map(item => {return {"value": Number(item[0]), "text": item[1]}})
+const options = Object.entries(settings.value.autor).map(item => {return {"value": Number(item[0]), "text": item[1]}})
 const tags = Object.entries(settings.value.tags).map(item => {return {"value": Number(item[0]), "text": item[1]}})
 </script>
 <style lang="scss" scoped>
