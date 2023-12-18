@@ -87,9 +87,7 @@ import BuilderMetaEditor from "../../components/builder/components/metaEditor.cl
 import BuilderSettingsBlog from "../../components/builder/components/settingsBlog.client.vue"
 import BuilderSettingsBase from "../../components/builder/components/settingsBase.client.vue"
 import BuilderSettingsNews from "../../components/builder/components/settingsNews.client.vue"
-// definePageMeta({
-// 	layout: 'auth'
-// })
+
 const h1Page = useH1Page()
 h1Page.value = 'Редактор страниц'
 
