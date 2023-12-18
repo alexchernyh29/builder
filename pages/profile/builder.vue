@@ -101,14 +101,6 @@ const editingMeta = useBuilderStatesEditingMeta()
 
 listPage.value = await useBuilderFuncGetPagesPathInCategory()
 
-const supabase = useSupabaseClient()
-// const user = useSupabaseUser()
-// const { data, error } = await supabase
-// 	.from('admins')
-// 		.select('*')
-// 			.eq('user_uid', user.value?.id ?? '')
-// const accessAllowed = ref(data.length > 0)
-
 const open = ref(false) 
 onMounted(() => {
   open.value = prompt('скажи пароль?', 1);
