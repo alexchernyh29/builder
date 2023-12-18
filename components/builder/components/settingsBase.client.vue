@@ -5,13 +5,13 @@
     >
 		<div style="display: flex; gap: 8px; align-items: flex-end; margin-bottom: 24px;">
 			<div style="width: 33%">
-				<!-- <UiSelect
+				<UiSelect
 					label="Автор"
 					v-model="bufData.autor"
 					read-text="text"
 					read-value="value"
 					:options='options'
-				/> -->
+				/>
 			</div>
 			<div style="width: 33%">
 				<p>Дата публикации</p>
